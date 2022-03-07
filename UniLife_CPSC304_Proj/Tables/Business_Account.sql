@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Business_Account]
+(
+	[AID] INT NOT NULL PRIMARY KEY,
+	FOREIGN KEY (AID) REFERENCES Account
+)

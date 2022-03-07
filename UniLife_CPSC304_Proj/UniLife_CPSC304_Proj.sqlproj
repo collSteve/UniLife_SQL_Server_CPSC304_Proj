@@ -56,5 +56,29 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Post.sql" />
+    <Build Include="Tables\User_Account.sql" />
+    <Build Include="Tables\Account.sql" />
+    <Build Include="Tables\Business_Account.sql" />
+    <Build Include="Tables\Social_Media_Post.sql" />
+    <Build Include="Tables\Selling_Post.sql" />
+    <Build Include="Tables\Housing_Post.sql" />
+    <Build Include="Tables\File.sql" />
+    <Build Include="Tables\Comment.sql" />
+    <Build Include="Tables\Has_Group_Post.sql" />
+    <Build Include="Tables\Group.sql" />
+    <Build Include="Tables\Location.sql" />
+    <Build Include="Tables\CityCode.sql" />
+    <Build Include="Tables\University.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.InitializeTables.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UniLife_CPSC304_Proj.publish.xml" />
   </ItemGroup>
 </Project>

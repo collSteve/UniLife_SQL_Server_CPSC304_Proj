@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Housing_Post]
+(
+	[PID] INT NOT NULL PRIMARY KEY,
+	[Address] VARCHAR,
+	[Email] VARCHAR,
+	FOREIGN KEY (PID) REFERENCES Post(PID)
+)
