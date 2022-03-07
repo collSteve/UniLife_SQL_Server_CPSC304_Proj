@@ -4,4 +4,4 @@ This is the SQL server scripts for UniLife Project which is intended as a school
 
 ### Group Number: 39 | Members: Ke (Steve) Ren, Yi Ran Liao, and, Aung Khant Min
 
-This project is directly deployed to MS SQL server to interact with project C# backend. 
+This project is directly deployed to MS SQL server to interact with project ASP.NET backend. 
