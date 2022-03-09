@@ -79,6 +79,6 @@
     <PostDeploy Include="Scripts\Script.InitializeTables.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="UniLife_CPSC304_Proj.publish.xml" />
+    <None Include="Steve_UniLife_CPSC304_Proj.publish.xml" />
   </ItemGroup>
 </Project>
