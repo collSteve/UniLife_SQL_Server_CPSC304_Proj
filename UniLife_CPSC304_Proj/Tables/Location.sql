@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Location]
 (
-	[City] VARCHAR,
+	[City] VARCHAR(200),
 	Province_State VARCHAR,
 	Country VARCHAR,
 	PRIMARY KEY (City, Province_State, Country),

@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[CityCode]
 (
-	[City] VARCHAR PRIMARY KEY,
+	[City] VARCHAR(200) PRIMARY KEY,
 	ACode INT
 )
