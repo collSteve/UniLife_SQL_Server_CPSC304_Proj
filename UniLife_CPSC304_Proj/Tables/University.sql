@@ -1,4 +1,4 @@
 ﻿CREATE TABLE [dbo].[University]
 (
-	[UniName] VARCHAR PRIMARY KEY
+	[UniName] VARCHAR(200) PRIMARY KEY
 )
