@@ -64,7 +64,13 @@
     <Build Include="Tables\User_Account.sql" />
     <Build Include="Tables\Account.sql" />
     <Build Include="Tables\Admin_Account.sql"/>
-    <Build Include="Tables\Business_Account.sql" />
+    <Build Include="Tables\Business_Account.sql"/>
+    <Build Include="Tables\Ad_category.sql"/>
+    <Build Include="Tables\Advertisements.sql" />
+    <Build Include="Tables\Categories.sql" />
+    <Build Include="Tables\Create_ads.sql" />
+    <Build Include="Tables\Post_category.sql" />
+    <Build Include="Tables\User_category.sql" />
     <Build Include="Tables\Social_Media_Post.sql" />
     <Build Include="Tables\Selling_Post.sql" />
     <Build Include="Tables\Housing_Post.sql" />
