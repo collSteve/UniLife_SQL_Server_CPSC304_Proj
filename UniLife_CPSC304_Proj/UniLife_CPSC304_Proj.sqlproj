@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Steve_UniLife_CPSC304_Proj.publish.xml" />
+    <None Include="YL_UniLife_CPSC304_Proj.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="UniLife_CPSC304_Proj.refactorlog" />

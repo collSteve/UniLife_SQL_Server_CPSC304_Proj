@@ -1,4 +1,5 @@
-﻿/*
+﻿
+/*
 Post-Deployment Script Template							
 --------------------------------------------------------------------------------------
  This file contains SQL statements that will be appended to the build script.		
@@ -35,30 +36,8 @@ Insert dbo.File_Type([Type])
 VALUES( 'Other');
 END
 
-/* File */
-/*
-If Not Exists(select * from [dbo].[File] where [FID]=1)
-Begin
-INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
-VALUES (1, 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg', 'Image', ); 
-End
-
-If Not Exists(select * from [dbo].[File] where [FID]=2)
-Begin
-INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
-VALUES (2, 'https://www.gettyimages.ca/gi-resources/images/500px/983794168.jpg', 'Image', ); 
-End
-
-If Not Exists(select * from [dbo].[File] where [FID]=3)
-Begin
-INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
-VALUES (3, 'https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg', 'Image', ); 
-End
-*/
-
-
-
 /* Post */
+
 If Not Exists(select * from [dbo].Post where [PID]=1)
 Begin
 INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
@@ -111,6 +90,83 @@ If Not Exists(select * from [dbo].Post where [PID]=9)
 Begin
 INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
 VALUES (9, CAST(N'1912-10-13' AS Date), 'Abandoned warehouse', ' 2,000 square ft Military warehouse abandoned due to WWI. Now selling to public for $2,000. Might include Chlorine gas and need removal by buyer himself', 5, 2, 2); 
+End
+
+
+/* Social Media Post */
+If Not Exists(select * from [dbo].Social_Media_Post where [PID]=2)
+Begin
+INSERT [dbo].Social_Media_Post([PID])
+VALUES (2); 
+End
+
+If Not Exists(select * from [dbo].Social_Media_Post where [PID]=3)
+Begin
+INSERT [dbo].Social_Media_Post([PID])
+VALUES (3); 
+End
+
+If Not Exists(select * from [dbo].Social_Media_Post where [PID]=4)
+Begin
+INSERT [dbo].Social_Media_Post([PID])
+VALUES (4); 
+End
+
+/* Selling Post*/
+If Not Exists(select * from [dbo].Selling_Post where [PID]=1)
+Begin
+INSERT [dbo].Selling_Post([PID], [Phone_Num], [Email])
+VALUES (1, 123456, 'test@123.com'); 
+End
+
+If Not Exists(select * from [dbo].Selling_Post where [PID]=5)
+Begin
+INSERT [dbo].Selling_Post([PID], [Phone_Num], [Email])
+VALUES (5, 654321, 'test2@123.com'); 
+End
+
+If Not Exists(select * from [dbo].Selling_Post where [PID]=6)
+Begin
+INSERT [dbo].Selling_Post([PID], [Phone_Num], [Email])
+VALUES (6, 98765, 'test3@123.com'); 
+End
+
+/* Housing post */
+If Not Exists(select * from [dbo].Housing_Post where [PID]=7)
+Begin
+INSERT [dbo].Housing_Post([PID], [Address], [Email])
+VALUES (7, '123 st YN, US', 'test4@123.com'); 
+End
+
+If Not Exists(select * from [dbo].Housing_Post where [PID]=8)
+Begin
+INSERT [dbo].Housing_Post([PID], [Address], [Email])
+VALUES (8, '43 Ave, Hawaii, US', 'test5@123.com'); 
+End
+
+If Not Exists(select * from [dbo].Housing_Post where [PID]=9)
+Begin
+INSERT [dbo].Housing_Post([PID], [Address], [Email])
+VALUES (9, '3434 Rixin road, Hanghai, China', 'test6@123.com'); 
+End
+
+/* File */
+If Not Exists(select * from [dbo].[File] where [FID]=1)
+Begin
+INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
+VALUES (1, 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg', 'Image', 2); 
+End
+
+If Not Exists(select * from [dbo].[File] where [FID]=2)
+Begin
+INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
+VALUES (2, 'https://www.gettyimages.ca/gi-resources/images/500px/983794168.jpg', 'Image', 3); 
+End
+
+If Not Exists(select * from [dbo].[File] where [FID]=3)
+Begin
+INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
+VALUES (3, 'https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg', 'Image', 8); 
 End
 
 
@@ -272,54 +328,89 @@ End
 
 
 
-/*
-/* table data for admin */
-If Not Exists(select * from [dbo].[Monitoring] where AID=11111111 and [UniName]='UVIC')
+/* table data for monitoring */
+
+If Not Exists(select * from [dbo].[Monitoring] where AID=2001 and [UniName]='UVIC')
 Begin
 INSERT [dbo].Monitoring(AID, UniName, Type_of_post) 
-VALUES (11111111, 'UVIC', 'Selling Post'); 
+VALUES (2001, 'UVIC', 'Selling Post'); 
 End
 
-If Not Exists(select * from [dbo].[Monitoring] where AID=21111111 and [UniName]='UBC')
+If Not Exists(select * from [dbo].[Monitoring] where AID=2002 and [UniName]='UBC')
 Begin
 INSERT [dbo].Monitoring(AID, UniName, Type_of_post) 
-VALUES (21111111, 'UBC', 'Social Media Post'); 
+VALUES (2002, 'UBC', 'Social Media Post'); 
 End
 
-If Not Exists(select * from [dbo].[Monitoring] where AID=31111111 and [UniName]='NYU')
+If Not Exists(select * from [dbo].[Monitoring] where AID=2003 and [UniName]='NYU')
 Begin
 INSERT [dbo].Monitoring(AID, UniName, Type_of_post) 
-VALUES (31111111, 'NYU', 'Housing Post'); 
-End
-
-If Not Exists(select * from [dbo].[Monitoring] where AID=41111111 and [UniName]='Harvard')
-Begin
-INSERT [dbo].Monitoring(AID, UniName, Type_of_post) 
-VALUES (41111111, 'Harvard', 'Selling Post'); 
+VALUES (2003, 'NYU', 'Housing Post'); 
 End
 
 /*data for University_post*/
-If Not Exists(select * from [dbo].University_Post where PID=000000000 and [UniName]='Harvard')
+If Not Exists(select * from [dbo].University_Post where PID=1 and [UniName]='Harvard')
 Begin
 INSERT [dbo].University_Post(PID, UniName) 
-VALUES (000000000, 'Harvard'); 
+VALUES (1, 'Harvard'); 
 End
-If Not Exists(select * from [dbo].University_Post where PID=000000000 and [UniName]='UBC')
+If Not Exists(select * from [dbo].University_Post where PID=2 and [UniName]='UBC')
 Begin
 INSERT [dbo].University_Post(PID, UniName) 
-VALUES (200000000, 'UBC'); 
+VALUES (2, 'UBC'); 
 End
-If Not Exists(select * from [dbo].University_Post where PID=000000000 and [UniName]='UVIC')
+If Not Exists(select * from [dbo].University_Post where PID=3 and [UniName]='UVIC')
 Begin
 INSERT [dbo].University_Post(PID, UniName) 
-VALUES (400000000, 'UVIC'); 
+VALUES (3, 'UVIC'); 
 End
-If Not Exists(select * from [dbo].University_Post where PID=000000000 and [UniName]='UofT')
+If Not Exists(select * from [dbo].University_Post where PID=4 and [UniName]='UofT')
 Begin
 INSERT [dbo].University_Post(PID, UniName) 
-VALUES (600000000, 'UofT'); 
+VALUES (4, 'UofT'); 
 End
-*/
+
+
+If Not Exists(select * from [dbo].Enrolls_In where AID=2 and [UniName]='UofT')
+Begin
+INSERT [dbo].Enrolls_In(AID, UniName) 
+VALUES (2, 'UofT'); 
+End
+If Not Exists(select * from [dbo].Enrolls_In where AID=1001 and [UniName]='UBC')
+Begin
+INSERT [dbo].Enrolls_In(AID, UniName) 
+VALUES (1001, 'UBC'); 
+End
+If Not Exists(select * from [dbo].Enrolls_In where AID=1002 and [UniName]='Harvard')
+Begin
+INSERT [dbo].Enrolls_In(AID, UniName) 
+VALUES (1002, 'Harvard'); 
+End
+If Not Exists(select * from [dbo].Enrolls_In where AID=1003 and [UniName]='UVIC')
+Begin
+INSERT [dbo].Enrolls_In(AID, UniName) 
+VALUES (1003, 'UVIC'); 
+End
+
+
+/* table data for member of */
+
+If Not Exists(select * from [dbo].Member_Of where AID=1003 and GID=1111)
+Begin
+INSERT [dbo].Member_Of(AID, GID, [Role]) 
+VALUES (1003, 1111, 'member'); 
+End
+If Not Exists(select * from [dbo].Member_Of where AID=1001 and GID=2222)
+Begin
+INSERT [dbo].Member_Of(AID, GID, [Role]) 
+VALUES (1001, 2222, 'member'); 
+End
+If Not Exists(select * from [dbo].Member_Of where AID=1002 and GID=3333)
+Begin
+INSERT [dbo].Member_Of(AID, GID, [Role]) 
+VALUES (1002, 3333, 'admin'); 
+End
+
 
 
 
@@ -451,3 +542,23 @@ Begin
 INSERT [dbo].[Categories]([ctg_type])
 VALUES ('Sports')
 END
+
+
+/* Comment*/
+If Not Exists(select * from [dbo].Comment where CID=1)
+Begin
+INSERT [dbo].Comment(CID, [Comment_Body], [Creator_UID], [PID]) 
+VALUES (1, 'a Test comment', 1001, 1); 
+End
+
+If Not Exists(select * from [dbo].Comment where CID=2)
+Begin
+INSERT [dbo].Comment(CID, [Comment_Body], [Creator_UID], [PID]) 
+VALUES (2, 'a second Test comment', 1002, 2); 
+End
+
+If Not Exists(select * from [dbo].Comment where CID=3)
+Begin
+INSERT [dbo].Comment(CID, [Comment_Body], [Creator_UID], [PID]) 
+VALUES (3, 'a thrid Test comment', 1003, 3); 
+End
