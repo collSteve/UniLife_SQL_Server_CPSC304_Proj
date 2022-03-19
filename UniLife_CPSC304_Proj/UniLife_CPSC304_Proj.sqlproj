@@ -63,9 +63,9 @@
     <Build Include="Tables\Post.sql" />
     <Build Include="Tables\User_Account.sql" />
     <Build Include="Tables\Account.sql" />
-    <Build Include="Tables\Admin_Account.sql"/>
-    <Build Include="Tables\Business_Account.sql"/>
-    <Build Include="Tables\Ad_category.sql"/>
+    <Build Include="Tables\Admin_Account.sql" />
+    <Build Include="Tables\Business_Account.sql" />
+    <Build Include="Tables\Ad_category.sql" />
     <Build Include="Tables\Advertisements.sql" />
     <Build Include="Tables\Categories.sql" />
     <Build Include="Tables\Create_ads.sql" />
@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Steve_UniLife_CPSC304_Proj.publish.xml" />
+    <None Include="AKM_UniLife_CPSC304_Proj.publish.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="UniLife_CPSC304_Proj.refactorlog" />
