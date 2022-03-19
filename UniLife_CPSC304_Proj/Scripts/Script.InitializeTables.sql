@@ -617,3 +617,21 @@ Begin
 INSERT [dbo].Comment(CID, [Comment_Body], [Creator_UID], [PID]) 
 VALUES (3, 'a thrid Test comment', 1003, 3); 
 End
+
+If Not Exists(select * from [dbo].Has_Group_Post where GID=1111 AND PID=9)
+Begin
+INSERT [dbo].Has_Group_Post([GID],[PID]) 
+VALUES (1111, 9); 
+End
+
+If Not Exists(select * from [dbo].Has_Group_Post where GID=2222 AND PID=6)
+Begin
+INSERT [dbo].Has_Group_Post([GID],[PID]) 
+VALUES (2222, 6); 
+End
+
+If Not Exists(select * from [dbo].Has_Group_Post where GID=3333 AND PID=2)
+Begin
+INSERT [dbo].Has_Group_Post([GID],[PID]) 
+VALUES (3333, 2); 
+End
