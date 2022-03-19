@@ -35,30 +35,7 @@ Insert dbo.File_Type([Type])
 VALUES( 'Other');
 END
 
-/* File */
-/*
-If Not Exists(select * from [dbo].[File] where [FID]=1)
-Begin
-INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
-VALUES (1, 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg', 'Image', ); 
-End
-
-If Not Exists(select * from [dbo].[File] where [FID]=2)
-Begin
-INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
-VALUES (2, 'https://www.gettyimages.ca/gi-resources/images/500px/983794168.jpg', 'Image', ); 
-End
-
-If Not Exists(select * from [dbo].[File] where [FID]=3)
-Begin
-INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
-VALUES (3, 'https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg', 'Image', ); 
-End
-*/
-
-
 /* Steve */
-
 If Not Exists(select * from [dbo].Account where [AID]=1)
 Begin
 INSERT [dbo].Account([AID], Username, Email, [Password]) 
@@ -76,7 +53,6 @@ Begin
 INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
 VALUES (2, 9.8); 
 End
-
 
 /* Post */
 If Not Exists(select * from [dbo].Post where [PID]=1)
@@ -131,6 +107,82 @@ If Not Exists(select * from [dbo].Post where [PID]=9)
 Begin
 INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
 VALUES (9, CAST(N'1912-10-13' AS Date), 'Abandoned warehouse', ' 2,000 square ft Military warehouse abandoned due to WWI. Now selling to public for $2,000. Might include Chlorine gas and need removal by buyer himself', 5, 2, 2); 
+End
+
+/* Social Media Post */
+If Not Exists(select * from [dbo].Social_Media_Post where [PID]=2)
+Begin
+INSERT [dbo].Social_Media_Post([PID])
+VALUES (2); 
+End
+
+If Not Exists(select * from [dbo].Social_Media_Post where [PID]=3)
+Begin
+INSERT [dbo].Social_Media_Post([PID])
+VALUES (3); 
+End
+
+If Not Exists(select * from [dbo].Social_Media_Post where [PID]=4)
+Begin
+INSERT [dbo].Social_Media_Post([PID])
+VALUES (4); 
+End
+
+/* Selling Post*/
+If Not Exists(select * from [dbo].Selling_Post where [PID]=1)
+Begin
+INSERT [dbo].Selling_Post([PID], [Phone_Num], [Email])
+VALUES (1, 123456, 'test@123.com'); 
+End
+
+If Not Exists(select * from [dbo].Selling_Post where [PID]=5)
+Begin
+INSERT [dbo].Selling_Post([PID], [Phone_Num], [Email])
+VALUES (5, 654321, 'test2@123.com'); 
+End
+
+If Not Exists(select * from [dbo].Selling_Post where [PID]=6)
+Begin
+INSERT [dbo].Selling_Post([PID], [Phone_Num], [Email])
+VALUES (6, 98765, 'test3@123.com'); 
+End
+
+/* Housing post */
+If Not Exists(select * from [dbo].Housing_Post where [PID]=7)
+Begin
+INSERT [dbo].Housing_Post([PID], [Address], [Email])
+VALUES (7, '123 st YN, US', 'test4@123.com'); 
+End
+
+If Not Exists(select * from [dbo].Housing_Post where [PID]=8)
+Begin
+INSERT [dbo].Housing_Post([PID], [Address], [Email])
+VALUES (8, '43 Ave, Hawaii, US', 'test5@123.com'); 
+End
+
+If Not Exists(select * from [dbo].Housing_Post where [PID]=9)
+Begin
+INSERT [dbo].Housing_Post([PID], [Address], [Email])
+VALUES (9, '3434 Rixin road, Hanghai, China', 'test6@123.com'); 
+End
+
+/* File */
+If Not Exists(select * from [dbo].[File] where [FID]=1)
+Begin
+INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
+VALUES (1, 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg', 'Image', 2); 
+End
+
+If Not Exists(select * from [dbo].[File] where [FID]=2)
+Begin
+INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
+VALUES (2, 'https://www.gettyimages.ca/gi-resources/images/500px/983794168.jpg', 'Image', 3); 
+End
+
+If Not Exists(select * from [dbo].[File] where [FID]=3)
+Begin
+INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
+VALUES (3, 'https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg', 'Image', 8); 
 End
 
 
