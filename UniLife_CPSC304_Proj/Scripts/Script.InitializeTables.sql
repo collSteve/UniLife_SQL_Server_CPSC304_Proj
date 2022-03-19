@@ -483,7 +483,7 @@ INSERT [dbo].[Business_Account]([AID])
 VALUES (3002); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=1)
+If Not Exists(select * from [dbo].[Business_Account] where [AID]=3003)
 Begin
 INSERT [dbo].[Business_Account]([AID]) 
 VALUES (3003); 
@@ -580,19 +580,19 @@ INSERT [dbo].[User_category]([AID], [ctg_type], [percentage])
 VALUES (1003, 'Sports', 0)
 END
 
-If Not Exists(select * from [dbo].[Post_category] where [PID] = 1001 and [ctg_type] = 'Movie')
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 1 and [ctg_type] = 'Movie')
 Begin
 INSERT [dbo].[Post_category]([PID], [ctg_type])
 VALUES (1, 'Movie')
 END
 
-If Not Exists(select * from [dbo].[Post_category] where [PID] = 1001 and [ctg_type] = 'Housing')
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 9 and [ctg_type] = 'Housing')
 Begin
 INSERT [dbo].[Post_category]([PID], [ctg_type])
-VALUES (2, 'Housing')
+VALUES (9, 'Housing')
 END
 
-If Not Exists(select * from [dbo].[Post_category] where [PID] = 1001 and [ctg_type] = 'Sports')
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 3 and [ctg_type] = 'Sports')
 Begin
 INSERT [dbo].[Post_category]([PID], [ctg_type])
 VALUES (3, 'Sports')
