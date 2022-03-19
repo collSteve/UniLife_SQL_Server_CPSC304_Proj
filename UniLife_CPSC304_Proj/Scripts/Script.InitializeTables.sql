@@ -57,26 +57,6 @@ End
 */
 
 
-/* Steve */
-
-If Not Exists(select * from [dbo].Account where [AID]=1)
-Begin
-INSERT [dbo].Account([AID], Username, Email, [Password]) 
-VALUES (1, 'Steve', 'wefew@gmail.com', 'My Password'); 
-End
-
-If Not Exists(select * from [dbo].Account where [AID]=2)
-Begin
-INSERT [dbo].Account([AID], Username, Email, [Password]) 
-VALUES (2, 'User2', 'User2@gmail.com', 'user2'); 
-End
-
-If Not Exists(select * from [dbo].[User_Account] where [AID]=2)
-Begin
-INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
-VALUES (2, 9.8); 
-End
-
 
 /* Post */
 If Not Exists(select * from [dbo].Post where [PID]=1)
@@ -290,3 +270,184 @@ INSERT [dbo].[Located_In](UniName, City, Province_State, Country)
 VALUES ('UVIC', 'Victoria', 'BC', 'Canada'); 
 End
 
+
+
+/*
+/* table data for admin */
+If Not Exists(select * from [dbo].[Monitoring] where AID=11111111 and [UniName]='UVIC')
+Begin
+INSERT [dbo].Monitoring(AID, UniName, Type_of_post) 
+VALUES (11111111, 'UVIC', 'Selling Post'); 
+End
+
+If Not Exists(select * from [dbo].[Monitoring] where AID=21111111 and [UniName]='UBC')
+Begin
+INSERT [dbo].Monitoring(AID, UniName, Type_of_post) 
+VALUES (21111111, 'UBC', 'Social Media Post'); 
+End
+
+If Not Exists(select * from [dbo].[Monitoring] where AID=31111111 and [UniName]='NYU')
+Begin
+INSERT [dbo].Monitoring(AID, UniName, Type_of_post) 
+VALUES (31111111, 'NYU', 'Housing Post'); 
+End
+
+If Not Exists(select * from [dbo].[Monitoring] where AID=41111111 and [UniName]='Harvard')
+Begin
+INSERT [dbo].Monitoring(AID, UniName, Type_of_post) 
+VALUES (41111111, 'Harvard', 'Selling Post'); 
+End
+
+/*data for University_post*/
+If Not Exists(select * from [dbo].University_Post where PID=000000000 and [UniName]='Harvard')
+Begin
+INSERT [dbo].University_Post(PID, UniName) 
+VALUES (000000000, 'Harvard'); 
+End
+If Not Exists(select * from [dbo].University_Post where PID=000000000 and [UniName]='UBC')
+Begin
+INSERT [dbo].University_Post(PID, UniName) 
+VALUES (200000000, 'UBC'); 
+End
+If Not Exists(select * from [dbo].University_Post where PID=000000000 and [UniName]='UVIC')
+Begin
+INSERT [dbo].University_Post(PID, UniName) 
+VALUES (400000000, 'UVIC'); 
+End
+If Not Exists(select * from [dbo].University_Post where PID=000000000 and [UniName]='UofT')
+Begin
+INSERT [dbo].University_Post(PID, UniName) 
+VALUES (600000000, 'UofT'); 
+End
+*/
+
+
+
+/* akm stuff */
+/* AKM */
+
+If Not Exists(select * from [dbo].Account where [AID]=1001)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (1001, 'Steven', 'wefew@gmail.com', 'My Password'); 
+End
+
+If Not Exists(select * from [dbo].Account where [AID]=1002)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (1002, 'User24', 'User24@gmail.com', 'user2'); 
+End
+
+If Not Exists(select * from [dbo].Account where [AID]=1003)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (1003, 'User3', 'User3@gmail.com', 'user3'); 
+End
+
+If Not Exists(select * from [dbo].Account where [AID]=2001)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (2001, 'Bot1', 'bot1@gmail.com', 'My Password'); 
+End
+
+If Not Exists(select * from [dbo].Account where [AID]=2002)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (2002, 'Bot2', 'bot2@gmail.com', 'user2'); 
+End
+
+If Not Exists(select * from [dbo].Account where [AID]=2003)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (2003, 'Bot3', 'bot3@gmail.com', 'user3'); 
+End
+
+If Not Exists(select * from [dbo].Account where [AID]=3001)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (3001, 'Microsoft', 'microsoft@gmail.com', 'My Password'); 
+End
+
+If Not Exists(select * from [dbo].Account where [AID]=3002)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (3002, 'Oracle', 'oracle@gmail.com', 'user2'); 
+End
+
+If Not Exists(select * from [dbo].Account where [AID]=3003)
+Begin
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (3003, 'Java', 'java@gmail.com', 'user3'); 
+End
+
+If Not Exists(select * from [dbo].[User_Account] where [AID]=1001)
+Begin
+INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
+VALUES (1001, 8.1); 
+End
+
+If Not Exists(select * from [dbo].[User_Account] where [AID]=1002)
+Begin
+INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
+VALUES (1002, 9.8); 
+End
+
+If Not Exists(select * from [dbo].[User_Account] where [AID]=1003)
+Begin
+INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
+VALUES (1003, 10); 
+End
+
+If Not Exists(select * from [dbo].[Admin_Account] where [AID]=2001)
+Begin
+INSERT [dbo].[Admin_Account]([AID]) 
+VALUES (2001); 
+End
+
+If Not Exists(select * from [dbo].[Admin_Account] where [AID]=2002)
+Begin
+INSERT [dbo].[Admin_Account]([AID]) 
+VALUES (2002); 
+End
+
+If Not Exists(select * from [dbo].[Admin_Account] where [AID]=2003)
+Begin
+INSERT [dbo].[Admin_Account]([AID]) 
+VALUES (2003); 
+End
+
+If Not Exists(select * from [dbo].[Business_Account] where [AID]=3001)
+Begin
+INSERT [dbo].[Business_Account]([AID]) 
+VALUES (3001); 
+End
+
+If Not Exists(select * from [dbo].[Business_Account] where [AID]=3002)
+Begin
+INSERT [dbo].[Business_Account]([AID]) 
+VALUES (3002); 
+End
+
+If Not Exists(select * from [dbo].Post where [PID]=1)
+Begin
+INSERT [dbo].[Business_Account]([AID]) 
+VALUES (3003); 
+End
+
+If Not Exists(select * from [dbo].[Categories] where [ctg_type] = 'Movie')
+Begin
+INSERT [dbo].[Categories]([ctg_type])
+VALUES ('Movie')
+END
+
+If Not Exists(select * from [dbo].[Categories] where [ctg_type] = 'Housing')
+Begin
+INSERT [dbo].[Categories]([ctg_type])
+VALUES ('Housing')
+END
+
+If Not Exists(select * from [dbo].[Categories] where [ctg_type] = 'Sports')
+Begin
+INSERT [dbo].[Categories]([ctg_type])
+VALUES ('Sports')
+END
