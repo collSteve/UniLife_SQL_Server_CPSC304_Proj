@@ -85,6 +85,7 @@
     <Build Include="Tables\Enrolls_In.sql" />
     <Build Include="Tables\Monitoring.sql" />
     <Build Include="Tables\Member_Of.sql" />
+    <Build Include="Tables\File_Type.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.InitializeTables.sql" />
