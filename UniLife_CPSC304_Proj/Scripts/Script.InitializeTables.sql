@@ -59,234 +59,136 @@ End
 
 /* Steve */
 
-If Not Exists(select * from [dbo].Account where [AID]=1)
-Begin
-INSERT [dbo].Account([AID], Username, Email, [Password]) 
-VALUES (1, 'Steve', 'wefew@gmail.com', 'My Password'); 
-End
-
-If Not Exists(select * from [dbo].Account where [AID]=2)
-Begin
-INSERT [dbo].Account([AID], Username, Email, [Password]) 
-VALUES (2, 'User2', 'User2@gmail.com', 'user2'); 
-End
-
-If Not Exists(select * from [dbo].[User_Account] where [AID]=2)
-Begin
-INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
-VALUES (2, 9.8); 
-End
-
-
-/* Post */
 If Not Exists(select * from [dbo].Post where [PID]=1)
 Begin
 INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (1, CAST(N'2022-12-03' AS Date), 'Sell Pepper', 'I want to sell my pepper', 5, 2, 2); 
+VALUES (1, CAST(N'2022-12-03' AS Date), 'My Post Title', 'My Post body', 5, 2, 2); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=2)
+/* AKM */
+
+If Not Exists(select * from [dbo].Account where [AID]=1001)
 Begin
-INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (2, CAST(N'1999-02-21' AS Date), 'Dogs are awesome', 'Dogs are humans best friends', 78, 0, 2); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (1001, 'Steve', 'wefew@gmail.com', 'My Password'); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=3)
+If Not Exists(select * from [dbo].Account where [AID]=1002)
 Begin
-INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (3, CAST(N'2002-06-12' AS Date), 'Cats suck', 'Cats suck because their poops smells too bad', 910, 234, 2); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (1002, 'User24', 'User24@gmail.com', 'user2'); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=4)
+If Not Exists(select * from [dbo].Account where [AID]=1003)
 Begin
-INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (4, CAST(N'2002-06-12' AS Date), 'Eating Subway in Subway', 'Subs yeet eifjweifie', 9120, 234, 2); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (1003, 'User3', 'User3@gmail.com', 'user3'); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=5)
+If Not Exists(select * from [dbo].Account where [AID]=2001)
 Begin
-INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (5, CAST(N'2005-11-13' AS Date), 'Sales on textbooks', 'Moving out so selling my CS texts: <software is bad>: $12', 5, 2, 2); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (2001, 'Bot1', 'bot1@gmail.com', 'My Password'); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=6)
+If Not Exists(select * from [dbo].Account where [AID]=2002)
 Begin
-INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (6, CAST(N'1997-10-13' AS Date), 'Selling My Table tennis Brackets', 'Pro tb brackets for only 100 bucks', 5, 2, 2); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (2002, 'Bot2', 'bot2@gmail.com', 'user2'); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=7)
+If Not Exists(select * from [dbo].Account where [AID]=2003)
 Begin
-INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (7, CAST(N'1967-10-13' AS Date), 'Large Luxury Apartment for rent', '3 bedroom apartment for $3300/month hydro included', 5, 2, 2); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (2003, 'Bot3', 'bot3@gmail.com', 'user3'); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=8)
+If Not Exists(select * from [dbo].Account where [AID]=3001)
 Begin
-INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (8, CAST(N'2009-09-13' AS Date), 'Mansion for sale', '1900 ft^2 mansion: 8 bedrooms, 6 washrooms with removable rocket lauchers. $10,000,000', 5, 2, 2); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (3001, 'Microsoft', 'microsoft@gmail.com', 'My Password'); 
 End
 
-If Not Exists(select * from [dbo].Post where [PID]=9)
+If Not Exists(select * from [dbo].Account where [AID]=3002)
 Begin
-INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
-VALUES (9, CAST(N'1912-10-13' AS Date), 'Abandoned warehouse', ' 2,000 square ft Military warehouse abandoned due to WWI. Now selling to public for $2,000. Might include Chlorine gas and need removal by buyer himself', 5, 2, 2); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (3002, 'Oracle', 'oracle@gmail.com', 'user2'); 
 End
 
-
-/* Table Data for CityCode */
-If Not Exists(select * from [dbo].[CityCode] where [City]='Vancouver')
+If Not Exists(select * from [dbo].Account where [AID]=3003)
 Begin
-INSERT [dbo].CityCode(City, ACode) 
-VALUES ('Vancouver', 778); 
+INSERT [dbo].Account([AID], Username, Email, [Password]) 
+VALUES (3003, 'Java', 'java@gmail.com', 'user3'); 
 End
 
-If Not Exists(select * from [dbo].[CityCode] where [City]='Toronto')
+If Not Exists(select * from [dbo].[User_Account] where [AID]=1001)
 Begin
-INSERT [dbo].CityCode(City, ACode) 
-VALUES ('Toronto', 416); 
-End
-If Not Exists(select * from [dbo].[CityCode] where [City]='Ottawa')
-Begin
-INSERT [dbo].CityCode(City, ACode) 
-VALUES ('Ottawa', 613); 
-End
-If Not Exists(select * from [dbo].[CityCode] where [City]='Edmonton')
-Begin
-INSERT [dbo].CityCode(City, ACode) 
-VALUES ('Edmonton', 780); 
-End
-If Not Exists(select * from [dbo].[CityCode] where [City]='New York City')
-Begin
-INSERT [dbo].CityCode(City, ACode) 
-VALUES ('New York City', 212); 
-End
-If Not Exists(select * from [dbo].[CityCode] where [City]='Cambridge')
-Begin
-INSERT [dbo].CityCode(City, ACode) 
-VALUES ('Cambridge', 519); 
-End
-If Not Exists(select * from [dbo].[CityCode] where [City]='Victoria')
-Begin
-INSERT [dbo].CityCode(City, ACode) 
-VALUES ('Victoria', 250); 
+INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
+VALUES (1001, 8.1); 
 End
 
-/* Table data for location */
-If Not Exists(select * from [dbo].[Location] where [City]='Vancouver' and [Province_State]='BC')
+If Not Exists(select * from [dbo].[User_Account] where [AID]=1002)
 Begin
-INSERT [dbo].[Location](City, Province_State, Country) 
-VALUES ('Vancouver', 'BC', 'Canada'); 
-End
-If Not Exists(select * from [dbo].[Location] where [City]='Toronto' and [Province_State]='Ontario')
-Begin
-INSERT [dbo].[Location](City, Province_State, Country) 
-VALUES ('Toronto', 'Ontario', 'Canada'); 
-End
-If Not Exists(select * from [dbo].[Location] where [City]='Ottawa' and [Province_State]='Ontario')
-Begin
-INSERT [dbo].[Location](City, Province_State, Country) 
-VALUES ('Ottawa', 'Ontario', 'Canada'); 
-End
-If Not Exists(select * from [dbo].[Location] where [City]='Edmonton' and [Province_State]='Alberta')
-Begin
-INSERT [dbo].[Location](City, Province_State, Country) 
-VALUES ('Edmonton', 'Alberta', 'Canada'); 
-End
-If Not Exists(select * from [dbo].[Location] where [City]='New York City' and [Province_State]='NY')
-Begin
-INSERT [dbo].[Location](City, Province_State, Country) 
-VALUES ('New York City', 'NY', 'USA'); 
-End
-If Not Exists(select * from [dbo].[Location] where [City]='Cambridge' and [Province_State]='MS')
-Begin
-INSERT [dbo].[Location](City, Province_State, Country) 
-VALUES ('Cambridge', 'MS', 'USA'); 
-End
-If Not Exists(select * from [dbo].[Location] where [City]='Victoria')
-Begin
-INSERT [dbo].[Location](City, Province_State, Country) 
-VALUES ('Victoria', 'BC', 'Canada'); 
+INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
+VALUES (1002, 9.8); 
 End
 
-/* Table data for university */
-If Not Exists(select * from [dbo].[University] where [UniName]='UBC')
+If Not Exists(select * from [dbo].[User_Account] where [AID]=1003)
 Begin
-INSERT [dbo].[University](UniName) 
-VALUES ('UBC'); 
-End
-If Not Exists(select * from [dbo].[University] where [UniName]='UVIC')
-Begin
-INSERT [dbo].[University](UniName) 
-VALUES ('UVIC'); 
-End
-If Not Exists(select * from [dbo].[University] where [UniName]='NYU')
-Begin
-INSERT [dbo].[University](UniName) 
-VALUES ('NYU'); 
-End
-If Not Exists(select * from [dbo].[University] where [UniName]='UofT')
-Begin
-INSERT [dbo].[University](UniName) 
-VALUES ('UofT'); 
-End
-If Not Exists(select * from [dbo].[University] where [UniName]='Harvard')
-Begin
-INSERT [dbo].[University](UniName) 
-VALUES ('Harvard'); 
+INSERT [dbo].[User_Account]([AID], [Seller_Rating]) 
+VALUES (1003, 10); 
 End
 
-/* Table data for Group */
-If Not Exists(select * from [dbo].[Group] where [GID]='1111')
+If Not Exists(select * from [dbo].[Admin_Account] where [AID]=2001)
 Begin
-INSERT [dbo].[Group](GID, Group_Name) 
-VALUES (1111, 'Group1'); 
-End
-If Not Exists(select * from [dbo].[Group] where [GID]='2222')
-Begin
-INSERT [dbo].[Group](GID, Group_Name) 
-VALUES (2222, 'Group2'); 
-End
-If Not Exists(select * from [dbo].[Group] where [GID]='3333')
-Begin
-INSERT [dbo].[Group](GID, Group_Name) 
-VALUES (3333, 'Group3'); 
-End
-If Not Exists(select * from [dbo].[Group] where [GID]='4444')
-Begin
-INSERT [dbo].[Group](GID, Group_Name) 
-VALUES (4444, 'Group4'); 
-End
-If Not Exists(select * from [dbo].[Group] where [GID]='5555')
-Begin
-INSERT [dbo].[Group](GID, Group_Name) 
-VALUES (5555, 'Group5'); 
+INSERT [dbo].[Admin_Account]([AID]) 
+VALUES (2001); 
 End
 
-/* table data for Located_In */
-If Not Exists(select * from [dbo].[Located_In] where [UniName]='UBC')
+If Not Exists(select * from [dbo].[Admin_Account] where [AID]=2002)
 Begin
-INSERT [dbo].[Located_In](UniName, City, Province_State, Country) 
-VALUES ('UBC', 'Vancouver', 'BC', 'Canada'); 
-End
-If Not Exists(select * from [dbo].[Located_In] where [UniName]='UofT')
-Begin
-INSERT [dbo].[Located_In](UniName, City, Province_State, Country) 
-VALUES ('UofT', 'Toronto', 'Ontario', 'Canada'); 
-End
-If Not Exists(select * from [dbo].[Located_In] where [UniName]='NYU')
-Begin
-INSERT [dbo].[Located_In](UniName, City, Province_State, Country) 
-VALUES ('NYU', 'New York City', 'NY', 'USA'); 
-End
-If Not Exists(select * from [dbo].[Located_In] where [UniName]='Harvard')
-Begin
-INSERT [dbo].[Located_In](UniName, City, Province_State, Country) 
-VALUES ('Harvard', 'Cambridge', 'MS', 'USA'); 
-End
-If Not Exists(select * from [dbo].[Located_In] where [UniName]='UVIC')
-Begin
-INSERT [dbo].[Located_In](UniName, City, Province_State, Country) 
-VALUES ('UVIC', 'Victoria', 'BC', 'Canada'); 
+INSERT [dbo].[Admin_Account]([AID]) 
+VALUES (2002); 
 End
 
+If Not Exists(select * from [dbo].[Admin_Account] where [AID]=2003)
+Begin
+INSERT [dbo].[Admin_Account]([AID]) 
+VALUES (2003); 
+End
+
+If Not Exists(select * from [dbo].[Business_Account] where [AID]=3001)
+Begin
+INSERT [dbo].[Business_Account]([AID]) 
+VALUES (3001); 
+End
+
+If Not Exists(select * from [dbo].[Business_Account] where [AID]=3002)
+Begin
+INSERT [dbo].[Business_Account]([AID]) 
+VALUES (3002); 
+End
+
+If Not Exists(select * from [dbo].Post where [PID]=1)
+Begin
+INSERT [dbo].[Business_Account]([AID]) 
+VALUES (3003); 
+End
+
+If Not Exists(select * from [dbo].[Categories] where [ctg_type] = 'Movie')
+Begin
+INSERT [dbo].[Categories]([ctg_type])
+VALUES ('Movie')
+END
+
+If Not Exists(select * from [dbo].[Categories] where [ctg_type] = 'Housing')
+Begin
+INSERT [dbo].[Categories]([ctg_type])
+VALUES ('Housing')
+END
+
+If Not Exists(select * from [dbo].[Categories] where [ctg_type] = 'Sports')
+Begin
+INSERT [dbo].[Categories]([ctg_type])
+VALUES ('Sports')
+END
