@@ -9,6 +9,40 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+/* File type */
+
+IF NOT EXISTS(select* from [dbo].File_Type where [Type]='Image')
+Begin 
+Insert dbo.File_Type([Type])
+VALUES( 'Image');
+END
+
+IF NOT EXISTS(select* from [dbo].File_Type where [Type]='Video')
+Begin 
+Insert dbo.File_Type([Type])
+VALUES( 'Video');
+END
+
+IF NOT EXISTS(select* from [dbo].File_Type where [Type]='Audio')
+Begin 
+Insert dbo.File_Type([Type])
+VALUES( 'Audio');
+END
+
+IF NOT EXISTS(select* from [dbo].File_Type where [Type]='Other')
+Begin 
+Insert dbo.File_Type([Type])
+VALUES( 'Other');
+END
+
+/* File */
+/*
+If Not Exists(select * from [dbo].[File] where [FID]=1)
+Begin
+INSERT [dbo].[File]([FID], [File_Location], [File_Type], PID) 
+VALUES (1, 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg', 'Image', ); 
+End
+*/
 
 /* Steve */
 

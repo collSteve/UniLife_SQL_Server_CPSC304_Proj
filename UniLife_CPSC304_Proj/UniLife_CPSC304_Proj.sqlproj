@@ -63,9 +63,9 @@
     <Build Include="Tables\Post.sql" />
     <Build Include="Tables\User_Account.sql" />
     <Build Include="Tables\Account.sql" />
-    <Build Include="Tables\Admin_Account.sql"/>
-    <Build Include="Tables\Business_Account.sql"/>
-    <Build Include="Tables\Ad_category.sql"/>
+    <Build Include="Tables\Admin_Account.sql" />
+    <Build Include="Tables\Business_Account.sql" />
+    <Build Include="Tables\Ad_category.sql" />
     <Build Include="Tables\Advertisements.sql" />
     <Build Include="Tables\Categories.sql" />
     <Build Include="Tables\Create_ads.sql" />
@@ -85,6 +85,7 @@
     <Build Include="Tables\Enrolls_In.sql" />
     <Build Include="Tables\Monitoring.sql" />
     <Build Include="Tables\Member_Of.sql" />
+    <Build Include="Tables\File_Type.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.InitializeTables.sql" />
