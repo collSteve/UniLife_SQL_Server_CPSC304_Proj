@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Admin]
+﻿CREATE TABLE [dbo].[Admin_Account]
 (
 	[AID] INT NOT NULL PRIMARY KEY,
 	FOREIGN KEY (AID) REFERENCES Account(AID)
