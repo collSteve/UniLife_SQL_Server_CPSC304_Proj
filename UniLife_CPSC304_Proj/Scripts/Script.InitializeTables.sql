@@ -192,3 +192,93 @@ Begin
 INSERT [dbo].[Categories]([ctg_type])
 VALUES ('Sports')
 END
+
+If Not Exists(select * from [dbo].[Advertisements] where [AdID] = '9001')
+Begin
+INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks])
+VALUES (9001, 'Something', 1099, 'sale of something', 100)
+END
+
+If Not Exists(select * from [dbo].[Advertisements] where [AdID] = '9002')
+Begin
+INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks])
+VALUES (9002, 'Housing sale in Mandy Lane', 1999999.99, 'Sell House', 1000)
+END
+
+If Not Exists(select * from [dbo].[Advertisements] where [AdID] = '9003')
+Begin
+INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks])
+VALUES (9003, 'Sublet housing for summer at Walter Gage', 950, 'Walter Gage sublet', 2)
+END
+
+If Not Exists(select * from [dbo].[Create_ads] where [AdID] = 9001)
+Begin
+INSERT [dbo].[Create_ads]([AdID], [AID])
+VALUES (9001, 3001)
+END
+
+If Not Exists(select * from [dbo].[Create_ads] where [AdID] = 9002)
+Begin
+INSERT [dbo].[Create_ads]([AdID], [AID])
+VALUES (9002, 3002)
+END
+
+If Not Exists(select * from [dbo].[Create_ads] where [AdID] = 9003)
+Begin
+INSERT [dbo].[Create_ads]([AdID], [AID])
+VALUES (9003, 3003)
+END
+
+If Not Exists(select * from [dbo].[Ad_category] where [AdID] = 9001 and [ctg_type] = 'Movie')
+Begin
+INSERT [dbo].[Ad_category]([AdID], [ctg_type])
+VALUES (9001, 'Movie')
+END
+
+If Not Exists(select * from [dbo].[Ad_category] where [AdID] = 9002 and [ctg_type] = 'Housing')
+Begin
+INSERT [dbo].[Ad_category]([AdID], [ctg_type])
+VALUES (9002, 'Housing')
+END
+
+If Not Exists(select * from [dbo].[Ad_category] where [AdID] = 9003 and [ctg_type] = 'Movie')
+Begin
+INSERT [dbo].[Ad_category]([AdID], [ctg_type])
+VALUES (9003, 'Movie')
+END
+
+If Not Exists(select * from [dbo].[User_category] where [AID] = 1001 and [ctg_type] = 'Movie')
+Begin
+INSERT [dbo].[User_category]([AdID], [ctg_type], [percentage])
+VALUES (1001, 'Movie', 90.1)
+END
+
+If Not Exists(select * from [dbo].[User_category] where [AID] = 1002 and [ctg_type] = 'Housing')
+Begin
+INSERT [dbo].[User_category]([AdID], [ctg_type], [percentage])
+VALUES (1002, 'Housing', 100)
+END
+
+If Not Exists(select * from [dbo].[User_category] where [AID] = 1003 and [ctg_type] = 'Sports')
+Begin
+INSERT [dbo].[User_category]([AdID], [ctg_type], [percentage])
+VALUES (1003, 'Sports', 0)
+END
+
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 1001 and [ctg_type] = 'Movie')
+Begin
+INSERT [dbo].[Post_category]([PID], [ctg_type])
+VALUES (1, 'Movie')
+END
+
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 1001 and [ctg_type] = 'Housing')
+Begin
+INSERT [dbo].[Post_category]([PID], [ctg_type])
+VALUES (2, 'Housing')
+END
+
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 1001 and [ctg_type] = 'Sports')
+Begin
+INSERT [dbo].[Post_category]([PID], [ctg_type])
+VALUES (3, 'Sports')
+END
