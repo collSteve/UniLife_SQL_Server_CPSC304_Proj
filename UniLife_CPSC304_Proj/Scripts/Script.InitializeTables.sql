@@ -132,8 +132,7 @@ Begin
 INSERT [dbo].Post([PID], [Create_Date], [Title], [Post_Body], [Num_Likes], [Num_Dislikes], [Creator_UID]) 
 VALUES (9, CAST(N'1912-10-13' AS Date), 'Abandoned warehouse', ' 2,000 square ft Military warehouse abandoned due to WWI. Now selling to public for $2,000. Might include Chlorine gas and need removal by buyer himself', 5, 2, 2); 
 End
-VALUES (1, CAST(N'2022-12-03' AS Date), 'My Post Title', 'My Post body', 5, 2, 2); 
-End
+
 
 /* Table Data for CityCode */
 If Not Exists(select * from [dbo].[CityCode] where [City]='Vancouver')
@@ -141,6 +140,7 @@ Begin
 INSERT [dbo].CityCode(City, ACode) 
 VALUES ('Vancouver', 778); 
 End
+
 If Not Exists(select * from [dbo].[CityCode] where [City]='Toronto')
 Begin
 INSERT [dbo].CityCode(City, ACode) 
