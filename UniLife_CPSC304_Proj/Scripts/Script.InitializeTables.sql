@@ -622,6 +622,18 @@ INSERT [dbo].[Post_category]([PID], [ctg_type])
 VALUES (1, 'Movie')
 END
 
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 1 and [ctg_type] = 'Sports')
+Begin
+INSERT [dbo].[Post_category]([PID], [ctg_type])
+VALUES (1, 'Sports')
+END
+
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 1 and [ctg_type] = 'Housing')
+Begin
+INSERT [dbo].[Post_category]([PID], [ctg_type])
+VALUES (1, 'Housing')
+END
+
 If Not Exists(select * from [dbo].[Post_category] where [PID] = 9 and [ctg_type] = 'Housing')
 Begin
 INSERT [dbo].[Post_category]([PID], [ctg_type])
@@ -632,6 +644,24 @@ If Not Exists(select * from [dbo].[Post_category] where [PID] = 3 and [ctg_type]
 Begin
 INSERT [dbo].[Post_category]([PID], [ctg_type])
 VALUES (3, 'Sports')
+END
+
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 7 and [ctg_type] = 'Housing')
+Begin
+INSERT [dbo].[Post_category]([PID], [ctg_type])
+VALUES (7, 'Housing')
+END
+
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 8 and [ctg_type] = 'Housing')
+Begin
+INSERT [dbo].[Post_category]([PID], [ctg_type])
+VALUES (8, 'Housing')
+END
+
+If Not Exists(select * from [dbo].[Post_category] where [PID] = 6 and [ctg_type] = 'Sports')
+Begin
+INSERT [dbo].[Post_category]([PID], [ctg_type])
+VALUES (6, 'Sports')
 END
 
 
