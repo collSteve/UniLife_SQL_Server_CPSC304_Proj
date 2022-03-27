@@ -6,5 +6,7 @@
 	[Post_Body] VARCHAR(MAX),
 	[Num_Likes] INT,
 	[Num_Dislikes] INT,
-	[Creator_UID] INT FOREIGN KEY REFERENCES [User_Account](AID) NOT NULL
+	[Creator_UID] INT FOREIGN KEY REFERENCES [User_Account](AID) 
+	on delete cascade on update cascade
+	NOT NULL 
 )
