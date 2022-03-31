@@ -4,5 +4,6 @@ CREATE TABLE [dbo].[Advertisements]
     [ad_description] VARCHAR(MAX),
     [price] FLOAT,
     [title] VARCHAR(200),
-    [clicks] INT
+    [clicks] INT,
+    [Create_Date] Date
 )

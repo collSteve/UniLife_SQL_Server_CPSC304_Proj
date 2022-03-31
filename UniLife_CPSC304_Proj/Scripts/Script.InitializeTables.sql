@@ -547,20 +547,20 @@ END
 /* Advertisments*/
 If Not Exists(select * from [dbo].[Advertisements] where [AdID] = '9001')
 Begin
-INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks])
-VALUES (9001, 'Something', 1099, 'sale of something', 100)
+INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks], [Create_Date])
+VALUES (9001, 'Something', 1099, 'sale of something', 100, CAST(N'1999-02-21' AS Date))
 END
 
 If Not Exists(select * from [dbo].[Advertisements] where [AdID] = '9002')
 Begin
-INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks])
-VALUES (9002, 'Housing sale in Mandy Lane', 1999999.99, 'Sell House', 1000)
+INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks], [Create_Date])
+VALUES (9002, 'Housing sale in Mandy Lane', 1999999.99, 'Sell House', 1000 , CAST(N'1989-02-21' AS Date))
 END
 
 If Not Exists(select * from [dbo].[Advertisements] where [AdID] = '9003')
 Begin
-INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks])
-VALUES (9003, 'Sublet housing for summer at Walter Gage', 950, 'Walter Gage sublet', 2)
+INSERT [dbo].[Advertisements]([AdID], [ad_description], [price], [title], [clicks], [Create_Date])
+VALUES (9003, 'Sublet housing for summer at Walter Gage', 950, 'Walter Gage sublet', 2, CAST(N'2002-02-22' AS Date))
 END
 
 If Not Exists(select * from [dbo].[Create_ads] where [AdID] = 9001)
